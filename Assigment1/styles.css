@@ -1,8 +1,9 @@
-body {
+.content {
   overflow-y: hidden;
   display: flex;
 
 }
+
 .text{
   align-items: center;
 }
