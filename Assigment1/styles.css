@@ -3,6 +3,9 @@ body {
   display: flex;
 
 }
+.text{
+  align-items: center;
+}
 
 .middle {
   display: block;
