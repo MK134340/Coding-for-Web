@@ -1,8 +1,13 @@
 body {
   overflow-y: hidden;
   display: flex;
+
 }
 
+.middle {
+  display: block;
+  width: 100%
+}
 
 .left {
   width: 50%;
