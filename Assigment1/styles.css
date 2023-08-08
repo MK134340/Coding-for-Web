@@ -1,40 +1,35 @@
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  overflow-y: hidden;
+  display: flex;
 }
 
-body {
-  min-height: 100vh;
-  max-width: 100vh;
+
+.left {
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+  overflow-y: scroll;
+  line-height: 300px;
+}
+
+.right {
+  width: 50%;
+  height: 100vh;
+  background-color: aliceblue;
+  overflow-y: scroll;
+  line-height: 300px;
+}
+
+.content {
+  align-items: center;
 }
 
 img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  margin-top: 50px;
+  max-height: 100%;
+  /* border: solid;
+  border-color: rgb(205, 20, 20); */
 }
-
-.split {
-  height: 100%;
-  width: fit-content;
-  position: fixed;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-  .left {
-    left: 0;
-    background-color: black;
-    
-   
-  }
-
-  .right {
-    right: 0;
-    background-color: white;
-
-
-  }
 
