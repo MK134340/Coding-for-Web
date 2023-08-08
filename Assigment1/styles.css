@@ -1,17 +1,4 @@
-.content {
-  overflow-y: hidden;
-  display: flex;
 
-}
-
-.text{
-  align-items: center;
-}
-
-.middle {
-  display: block;
-  width: 100%
-}
 
 .left {
   width: 50%;
@@ -27,10 +14,6 @@
   background-color: aliceblue;
   overflow-y: scroll;
   line-height: 300px;
-}
-
-.content {
-  align-items: center;
 }
 
 img {
