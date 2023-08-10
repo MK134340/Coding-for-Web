@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "Coding for Web",
+		"path": "."
+	},
+	{
+		"name": "D2.E1_css_selector_exercise",
+		"path": "../Coding for Web Resources/D2.E1_css_selector_exercise"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Coding for Web"
+  }
+}
