@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Insert relevant content inside the following meta tags-->
     <meta name="author" content="Author Name" />
     <meta name="description" content="This is a Good Morning Message Maker" />
@@ -67,7 +69,7 @@
 
         <br /><br />
 
-        <fieldset>
+        <fieldset id="radio">
           <legend>Select Font Family:</legend>
           <label
             ><input
@@ -102,9 +104,9 @@
 
         <label for="fontColor">Choose Font Color:</label>
         <select name="fontColor" id="fontColor" onchange="changeFontColor()">
+          <option value="#f7f7f7">Gray</option>
+          <option value="#ffffff">White</option>
           <option value="#000000">Black</option>
-          <option value="#ff0000">Red</option>
-          <option value="#00ff00">Green</option>
           <!-- Add more color options as needed -->
         </select>
 
@@ -120,7 +122,7 @@
           value="24"
           onchange="changeFontSize()"
         />
-        <span id="fontSizeValue">24px</span>
+        <div id="fontSizeValue">24px</div>
 
         <br /><br />
 
@@ -165,90 +167,7 @@
         Once you are done with your assignment, replace the instructions text inside the div with id "popup" with the following text: This tool was programmed by [insert names], as part of a unit titled 'Coding for the Web', facilitated during the 2023/24 odd semester at Srishti Manipal Institute. 
     -->
     <div id="popup">
-      <p>Coding for the Web '23/24 --- Assignment 1:</p>
-      <hr />
-      <p>
-        Using the provided boilerplate, program a 'Good Morning Message Maker'.
-        Include the following types of inputs / elements:
-      </p>
-      <ol>
-        <li>
-          A dropdown menu to choose between 3 image options. Use the following
-          three categories for the images: <u>Sunrise</u>, <u>Flowers</u>, and
-          <u>Still-Life</u>. The dropdown menu should display the category
-          names.
-        </li>
-        <br />
-        <li>
-          Two text input boxes – one to enter text values for the primary title,
-          and one for the secondary title.
-        </li>
-        <br />
-        <li>
-          A list of radio buttons to toggle between 3 font families for the
-          titles. You may either use the default font-families such as
-          'cursive', 'serif', and 'sans-serif', or specify your own font
-          families (via font-face).
-        </li>
-        <br />
-        <li>
-          A dropdown menu to choose the font colour. Specify upto 9 colour
-          options.
-        </li>
-        <br />
-        <li>A range slider to adjust the font size (in pixels).</li>
-        <br />
-        <li>A number input to specify text stroke (in pixels).</li>
-      </ol>
-      <br />
-      <hr />
-      <ul>
-        <li>
-          Take your time to carefully go through the index.html file and
-          understand the markup. The document has comments with instructions
-          regarding what to add/edit.
-        </li>
-        <br />
-        <li>
-          The markup for the inputs and controls have to be included inside the
-          &lt;section&gt; with the id "<u>input</u>"
-          <br />
-          <br />
-          The markup for the &lt;img&gt; and titles/texts have to be included
-          inside the &lt;div&gt; with the id "<u>output-canvas</u>". The
-          titles/texts need to use the ids "<u>text-1</u>"" and "<u>text-2</u>"
-          respectively.
-          <br />
-          <br />
-          Inside the &lt;h1&gt; in &lt;header&gt;, include your names after the
-          dash.
-        </li>
-        <br />
-        <li>Make sure to use labels for all the inputs</li>
-        <br />
-        <li>
-          Once you are done with the functional bits of this assignment, use CSS
-          to override the default styling of the input elements.
-        </li>
-        <br />
-        <li>
-          Once your are done with your assignment, replace all the instructions
-          text inside this popup (&lt;div&gt; with the id, "popup") with the
-          following text:
-          <br />
-          This page was made by [insert names], as part of a unit titled 'Coding
-          for the Web', facilitated during the 2023/24 odd semester at Srishti
-          Manipal Institute.
-          <br />
-        </li>
-      </ul>
-      <br />
-      <hr />
-      <p>
-        DO NOT EDIT the style.css and script.js files! Use the style-to-edit.css
-        and script-to-edit.js files to write your own CSS and JS.
-      </p>
-      <hr />
+      This page was made by Mrinalini Kumar, as part of a unit titled 'Coding for the Web', facilitated during the 2023/24 odd semester at Srishti Manipal Institute.
     </div>
   </body>
 </html>
