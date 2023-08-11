@@ -1,0 +1,88 @@
+/* Your CSS goes here --------------------- */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark mode theme */
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+#input {
+  padding: 20px;
+  background-color: #444;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+button {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#output-canvas {
+  padding: 10px;
+  background-color: #666;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+#selectedImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+h2,
+h3 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Additional styles can be added as needed */

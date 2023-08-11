@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Insert relevant content inside the following meta tags-->
+    <meta name="author" content="Author Name" />
+    <meta name="description" content="This is a Good Morning Message Maker" />
+    <meta property="og:title" content="Good Morning Message Maker" />
+    <meta
+      property="og:description"
+      content="This is a Good Morning Message Maker"
+    />
+
+    <title>Country Postcards</title>
+
+    <!-- No need to edit this-->
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+
+    <!-- Links to boilerplate CSS and JS files -- DO NOT CHANGE or EDIT THESE!!! -->
+    <link href="template-files/style.css" rel="stylesheet" type="text/css" />
+    <script
+      type="text/javascript"
+      src="template-files/script.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="template-files/html2canvas.js"
+      defer
+    ></script>
+
+    <!-- Links to YOUR CSS and JS files -->
+    <link href="style-to-edit.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script-to-edit.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <!--DO NOT EDIT THIS -->
+      <button id="openPopup" onclick="showPopup()">?</button>
+
+      <!--Insert your Names after the dash -->
+      <h1>Country Postcards – Mrinalini</h1>
+    </header>
+    <main>
+      <!-- ... (previous code) ... -->
+
+      <section id="input">
+        <label for="dropdown">Choose an image category:</label>
+        <select name="dropdownmenu" id="choice" onchange="chooseImage()">
+          <option value="" disabled selected>Select an option</option>
+          <option value="https://images.unsplash.com/photo-1483699606544-d42248fceac8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2luZ2Fwb3JlJTIwbmlnaHR8ZW58MHx8MHx8fDA%3D&w=1000&q=80">Singapore</option>
+          <option value="https://images.pexels.com/photos/2303337/pexels-photo-2303337.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-2303337.jpg&fm=jpg">Japan</option>
+          <option value="https://media.istockphoto.com/id/545789770/photo/view-of-downtown-cityscape-and-seoul-tower-in-seoul.jpg?s=612x612&w=0&k=20&c=hhXueO8hX8yaB4kaK8E5XkURInOdE7BKuYOdHOfnRoM=">South Korea</option>
+        </select>
+
+        <br /><br />
+
+        <label for="primaryTitle">Primary Title:</label>
+        <input type="text" id="primaryTitle" oninput="outputText()" />
+
+        <label for="secondaryTitle">Secondary Title:</label>
+        <input type="text" id="secondaryTitle" oninput="outputText()" />
+
+        <br /><br />
+
+        <fieldset>
+          <legend>Select Font Family:</legend>
+          <label
+            ><input
+              type="radio"
+              name="fontFamily"
+              value="cursive"
+              onchange="changeFont()"
+            />
+            Cursive</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="fontFamily"
+              value="serif"
+              onchange="changeFont()"
+            />
+            Serif</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="fontFamily"
+              value="sans-serif"
+              onchange="changeFont()"
+            />
+            Sans-serif</label
+          >
+        </fieldset>
+
+        <br />
+
+        <label for="fontColor">Choose Font Color:</label>
+        <select name="fontColor" id="fontColor" onchange="changeFontColor()">
+          <option value="#000000">Black</option>
+          <option value="#ff0000">Red</option>
+          <option value="#00ff00">Green</option>
+          <!-- Add more color options as needed -->
+        </select>
+
+        <br /><br />
+
+        <label for="fontSize">Adjust Font Size:</label>
+        <input
+          type="range"
+          id="fontSize"
+          min="12"
+          max="48"
+          step="2"
+          value="24"
+          onchange="changeFontSize()"
+        />
+        <span id="fontSizeValue">24px</span>
+
+        <br /><br />
+
+        <label for="textStroke">Text Stroke (px):</label>
+        <input
+          type="number"
+          id="textStroke"
+          min="0"
+          max="10"
+          step="1"
+          value="0"
+          onchange="changeTextStroke()"
+        />
+      </section>
+
+      <!-- Button to Save Image | DO NOT EDIT THIS -->
+      <button id="save-img" onclick="saveImage()">Save Image</button>
+
+      <!-- ... (rest of the code) ... -->
+
+      <!-- Button to Save Image | DO NOT EDIT THIS -->
+      <button id="save-img">Save Image</button>
+
+      <section id="output">
+        <div id="output-canvas">
+        <img src="" alt="Selected Image" id="selectedImage">
+        <h2 id="text-1"></h2>
+        <h3 id="text-2"></h3>
+    </div>
+</section>
+
+          <!-- Markup for your image and texts go inside this div -->
+          <!-- Use the ID "text-1" for Text 1 -->
+          <!-- Use the ID "text-2" for Text 2 -->
+        </div>
+      </section>
+    </main>
+
+    <!--DO NOT EDIT THIS DIV -->
+    <div id="popupCover" onclick="hidePopup()"></div>
+
+    <!-- 
+        Once you are done with your assignment, replace the instructions text inside the div with id "popup" with the following text: This tool was programmed by [insert names], as part of a unit titled 'Coding for the Web', facilitated during the 2023/24 odd semester at Srishti Manipal Institute. 
+    -->
+    <div id="popup">
+      <p>Coding for the Web '23/24 --- Assignment 1:</p>
+      <hr />
+      <p>
+        Using the provided boilerplate, program a 'Good Morning Message Maker'.
+        Include the following types of inputs / elements:
+      </p>
+      <ol>
+        <li>
+          A dropdown menu to choose between 3 image options. Use the following
+          three categories for the images: <u>Sunrise</u>, <u>Flowers</u>, and
+          <u>Still-Life</u>. The dropdown menu should display the category
+          names.
+        </li>
+        <br />
+        <li>
+          Two text input boxes – one to enter text values for the primary title,
+          and one for the secondary title.
+        </li>
+        <br />
+        <li>
+          A list of radio buttons to toggle between 3 font families for the
+          titles. You may either use the default font-families such as
+          'cursive', 'serif', and 'sans-serif', or specify your own font
+          families (via font-face).
+        </li>
+        <br />
+        <li>
+          A dropdown menu to choose the font colour. Specify upto 9 colour
+          options.
+        </li>
+        <br />
+        <li>A range slider to adjust the font size (in pixels).</li>
+        <br />
+        <li>A number input to specify text stroke (in pixels).</li>
+      </ol>
+      <br />
+      <hr />
+      <ul>
+        <li>
+          Take your time to carefully go through the index.html file and
+          understand the markup. The document has comments with instructions
+          regarding what to add/edit.
+        </li>
+        <br />
+        <li>
+          The markup for the inputs and controls have to be included inside the
+          &lt;section&gt; with the id "<u>input</u>"
+          <br />
+          <br />
+          The markup for the &lt;img&gt; and titles/texts have to be included
+          inside the &lt;div&gt; with the id "<u>output-canvas</u>". The
+          titles/texts need to use the ids "<u>text-1</u>"" and "<u>text-2</u>"
+          respectively.
+          <br />
+          <br />
+          Inside the &lt;h1&gt; in &lt;header&gt;, include your names after the
+          dash.
+        </li>
+        <br />
+        <li>Make sure to use labels for all the inputs</li>
+        <br />
+        <li>
+          Once you are done with the functional bits of this assignment, use CSS
+          to override the default styling of the input elements.
+        </li>
+        <br />
+        <li>
+          Once your are done with your assignment, replace all the instructions
+          text inside this popup (&lt;div&gt; with the id, "popup") with the
+          following text:
+          <br />
+          This page was made by [insert names], as part of a unit titled 'Coding
+          for the Web', facilitated during the 2023/24 odd semester at Srishti
+          Manipal Institute.
+          <br />
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <p>
+        DO NOT EDIT the style.css and script.js files! Use the style-to-edit.css
+        and script-to-edit.js files to write your own CSS and JS.
+      </p>
+      <hr />
+    </div>
+  </body>
+</html>
