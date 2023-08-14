@@ -5,6 +5,7 @@
 body {
   padding: 40px 10%;
   background-color: rgb(235, 235, 235);
+  font-family: "InstrumentSans";
 }
 
 section {
@@ -238,4 +239,12 @@ section > div {
   top: 0px;
   left: 0px;
   margin: 0px;
+}
+
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("InstrumentSans-VariableFont_wdth,wght.ttf") format("ttf"),
+    url("InstrumentSans-Italic-VariableFont_wdth,wght.ttf") format("ttf");
+  font-style: var();
+  font-weight: var();
 }
