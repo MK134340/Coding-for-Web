@@ -1,0 +1,219 @@
+/* BODY AND SECTIONS */
+/* ----------------------------------------------------- */
+/* All body and section styling available here (except for the fonts, which are declared in the defaults+fonts.css). Some properties have already been declared */
+
+body {
+  padding: 40px 10%;
+  background-color: rgb(235, 235, 235);
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+section > h2 {
+  text-align: center;
+  line-height: 1;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+}
+
+section > em {
+  display: block;
+  margin: 8px 0;
+  text-align: center;
+}
+
+section > div {
+  padding: 10px;
+}
+
+#s6 > div {
+  background-color: #b298dc;
+}
+#s7 > div {
+  background-color: #bdc696;
+}
+
+/* SECTION 1 */
+/* ----------------------------------------------------- */
+
+#s1 span {
+  background-color: ;
+  mix-blend-mode: ;
+}
+
+#s1 > div > p {
+  margin: 0;
+}
+
+#s1 > div {
+  background-color: lightgoldenrodyellow;
+  column-count: 3;
+}
+
+#s1 div {
+  background-color: red;
+  column-count: 3;
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  #s1 span {
+    background-color: blue;
+    mix-blend-mode: difference;
+  }
+
+  #s1 > div > p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  #s1 > div {
+    background-color: lightgoldenrodyellow;
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 600px) {
+  #s1 span {
+    background-color: rgb(232, 72, 165);
+    mix-blend-mode: difference;
+  }
+
+  #s1 > div > p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  #s1 > div {
+    background-color: rgb(52, 190, 142);
+    column-count: 1;
+  }
+}
+
+/* SECTION 2 */
+/* ----------------------------------------------------- */
+
+#s2 > div {
+  background-color: #cdeac0;
+}
+
+#s2 > div > div {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* SECTION 3 */
+/* ----------------------------------------------------- */
+
+#s3 > div {
+  background-color: #ff5964;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#s3 > div > div {
+  width: 400px;
+  background-color: white;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  #s3 > div {
+    background-color: #b298dc;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  #s3 > div > div {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #s3 > div {
+    background-color: yellow;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #s3 > div > div {
+    width: 80%;
+    align-items: center;
+  }
+}
+
+/* SECTION 4 */
+/* ----------------------------------------------------- */
+
+#s4 > div {
+  background-color: #b8f3ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#s4 > div > div {
+  background-color: white;
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  #s4 > div {
+    background-color: #b298dc;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  #s4 > div > div {
+    width: 100%;
+  }
+}
+
+/* SECTION 5 */
+/* ----------------------------------------------------- */
+
+#s5 > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#s5 > div > span {
+  background-color: #b298dc;
+  padding: 10px;
+  margin: 10px;
+}
+
+#s5 > button {
+  padding: 10px;
+  background-color: #bdc696;
+  font-family: "FT88", monospace;
+  margin: 10px;
+  display: none;
+}
+
+#box {
+  background-color: #b8f3ff;
+  padding: 10px;
+  /* display: none; */
+  visibility: hidden;
+  width: 120px;
+}
+
+#box > ul {
+  margin: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #s5 > div {
+    visibility: hidden;
+  }
+  #s5 > button {
+    visibility: visible;
+  }
+}
