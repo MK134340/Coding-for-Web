@@ -60,9 +60,19 @@ main h2 {
 main img {
   display: block;
   margin: 0 auto;
-  max-width: 30%; /* Center align the image */
+  max-height: 40vh; /* Center align the image */
 }
 
 main p {
   margin-top: 10px;
+}
+
+#section {
+  background-color: #f7f7f7;
+  padding: 30px;
+}
+
+#heading {
+  font-size: large;
+  font-weight: bold;
 }
