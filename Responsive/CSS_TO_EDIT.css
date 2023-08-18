@@ -199,8 +199,7 @@ section > div {
 #box {
   background-color: #b8f3ff;
   padding: 10px;
-  /* display: none; */
-  visibility: hidden;
+  display: none;
   width: 120px;
 }
 
@@ -211,9 +210,9 @@ section > div {
 
 @media screen and (max-width: 600px) {
   #s5 > div {
-    visibility: hidden;
+    display: none;
   }
   #s5 > button {
-    visibility: visible;
+    display: inline;
   }
 }
