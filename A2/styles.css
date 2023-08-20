@@ -1,0 +1,145 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 24px;
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: ;
+}
+
+.sticker-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  gap: 0px;
+  width: 100%;
+}
+
+.sticker-box {
+  background-color: #f0f0f0;
+  padding: 10px;
+
+  width: 33.33%;
+}
+
+.sticker {
+  padding: 10px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.sticker img {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.label-left,
+.label-right {
+  font-size: 10px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.label-left {
+  left: 10px;
+}
+
+.label-right {
+  right: 10px;
+}
+
+.sticker-pair {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border: solid;
+  border-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .label-left,
+  .label-right {
+    font-size: 10px;
+  }
+  .sticker-pair {
+    border-radius: 8px;
+  }
+  .sticker-sheet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 0px;
+    width: 100%;
+  }
+
+  .sticker-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+
+    width: 50%;
+  }
+
+  .sticker {
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .sticker img {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sticker-box {
+    width: 100%;
+  }
+  .sticker-pair {
+    border-radius: 8px;
+  }
+}

@@ -1,9 +1,10 @@
-function showDiv() {
-  let thing = document.getElementById("box");
+let div2 = document.getElementById("box");
+let btn = document.getElementById("button");
 
-  if (thing.style.display !== "none") {
-    thing.style.visibility = "block";
+function showDiv() {
+  if (div2.style.display === "none") {
+    div2.style.display = "block";
   } else {
-    thing.style.visibility = "none";
+    div2.style.display = "none";
   }
 }
