@@ -130,6 +130,11 @@ main {
   width: 33.33%;
 }
 
+.links {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
 @media screen and (max-width: 1280px) and (min-width: 820px) {
   .label-left,
   .label-right {
