@@ -1,0 +1,33 @@
+#div1 {
+  background-color: black;
+  width: 400px;
+  height: 400px;
+}
+#div2 {
+  background-color: black;
+  width: 400px;
+  height: 400px;
+}
+
+body {
+  background-color: whitesmoke;
+  color: white;
+}
+
+.divs {
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  gap: 60px;
+}

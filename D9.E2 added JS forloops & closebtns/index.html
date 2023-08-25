@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="script.js" defer></script>
+        <title>D9.E2 &middot; JS for-Loops</title>
+    </head>
+
+    <body>
+        <!--- BUTTONS -->
+        <button id="btn1" onclick="toggleMenu1()">BUTTON 1: Toggle #menu1 open and close</button>
+        
+        <button id="btn2">BUTTON 2: Toggle #menu2 open and close</button>
+
+        
+        <!--- DIVS (#menus)-->
+
+        <div id="menu1" class="closed">
+            <button class="closemenu">X</button>
+            &nbsp; #menu1. Opened via HTML onclick attribute on button 1.
+        </div>
+        
+        <div id="menu2" class="closed">
+            <button class="closemenu">X</button>
+            &nbsp; #menu2. Opened onload with the 'load' eventlistener added to the body. Can also be opened/closed with the 'click' event listener added to button 2
+        </div>
+        
+        <div id="menu3">
+            <button class="closemenu">X</button>
+            &nbsp; #menu3. Opened by default
+        </div>        
+
+    </body>
+
+</html>
