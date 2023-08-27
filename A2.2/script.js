@@ -74,12 +74,11 @@ let galleryItemData = [
     },
     {
       id: "i",
-      img1: "Assets/r1a.png",
-      label1L: "LENGTH",
-      label1R: "बाएं",
-      img2: "Assets/r1b.png",
-      label2L: "WIDTH",
-      label2R: "चौड़ाई",
+      label1Left: "LENGTH",
+      label1Right: "बाएं",
+      img: "Assets/anomaly.png",
+      label2Left: "WIDTH",
+      label2Right: "चौड़ाई",
     },
     {
       id: "j",
@@ -137,10 +136,10 @@ let galleryItemData = [
     },
     {
       id: "p",
-      img1: "Assets/anomaly.png",
+      img1: "Assets/r9a.png",
       label1L: "CLOSE",
       label1R: "बंद",
-      img2: "Assets/anomaly.png",
+      img2: "Assets/r9b.png",
       label2L: "OPEN",
       label2R: "खुला",
     },
@@ -174,3 +173,55 @@ let generateGallery = () => {
 };
 
 generateGallery();
+
+let generateAnomaly = () => {
+  const anomalyIndex = galleryItemData.findIndex(item => item.id === "i"); // Find the index of the anomaly sticker (id "p")
+  const anomalyItem = galleryItemData[anomalyIndex]; // Get the anomaly sticker object
+
+  // Create the HTML content for the anomaly sticker
+  const anomalyHTML = `
+    <div class="sticker-box" id="${anomalyItem.id}">
+      <div class="sticker-pair">
+        <div class="sticker">
+          <img src="${anomalyItem.img}" alt="Sticker Image" />
+          <div class="label-group">
+            <div class="label-left" id="left1">${anomalyItem.label1Left}</div>
+            <div class="label-left" id="left2">${anomalyItem.label1Right}</div>
+          </div>
+          <div class="label-group">
+            <div class="label-right" id="right1">${anomalyItem.label2Left}</div>
+            <div class="label-right" id="right2">${anomalyItem.label2Right}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Insert the anomaly sticker HTML into the gallery
+  gallery.innerHTML = galleryItemData
+    .map((item, index) => {
+      if (index === anomalyIndex) {
+        return anomalyHTML;
+      } else {
+        return `
+          <div class="sticker-box" id="${item.id}">
+            <div class="sticker-pair">
+              <div class="sticker">
+                <img src="${item.img1}" alt="Sticker Image 1" />
+                <div class="label-left">${item.label1L}</div>
+                <div class="label-right">${item.label1R}</div>
+              </div>
+              <div class="sticker">
+                <img src="${item.img2}" alt="Sticker Image 2" />
+                <div class="label-left">${item.label2L}</div>
+                <div class="label-right">${item.label2R}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    })
+    .join("");
+};
+
+generateAnomaly();
